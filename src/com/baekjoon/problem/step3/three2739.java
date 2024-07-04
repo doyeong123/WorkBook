@@ -37,7 +37,7 @@ public class three2739 {
         for(int i=1; i<10;i++)
         {
 
-            System.out.println(x+"X"+i+"="+x*i);
+            System.out.println(x+" * "+i+" = "+(x*i));
 
         }
 
