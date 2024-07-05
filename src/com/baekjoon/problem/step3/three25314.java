@@ -1,4 +1,7 @@
 package com.baekjoon.problem.step3;
+
+import java.util.Scanner;
+
 //코딩은 체육과목 입니다
 //시간 제한	메모리 제한	제출	정답	맞힌 사람	정답 비율
 //0.5 초 (추가 시간 없음)	1024 MB (추가 메모리 없음)	88384	56083	50743	64.150%
@@ -44,4 +47,22 @@ package com.baekjoon.problem.step3;
 //예제 출력 2
 //long long long long long int
 public class three25314 {
+
+    public static void main(String[] args) {
+
+
+        Scanner sc = new Scanner(System.in);
+        //x가 정수형태의 입력을 받는다.
+        int x = sc.nextInt();
+        //문자열 c 생성
+        String c = "";
+        //4단위로 long이 증가하기 때문에 x/4만큼의 루프를 할 수 있게 조건 설정.
+        for (int i = 0; i <x/4; i++) {
+            //횟수(4++)에 따라 long이 적히기 때문에 누적연산.(뒤에는 공백 한 칸 작성)
+            c += "long ";
+            //누적 연산+"int" 출력.
+            System.out.println(c+"int");
+        }
+    }
+
 }
