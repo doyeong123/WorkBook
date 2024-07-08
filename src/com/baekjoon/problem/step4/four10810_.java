@@ -1,5 +1,11 @@
 package com.baekjoon.problem.step4;
 //배열에 값을 쓰는 문제
+//이해..
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+import java.util.StringTokenizer;
 
 //공 넣기
 //시간 제한	메모리 제한	제출	정답	맞힌 사람	정답 비율
@@ -35,5 +41,65 @@ package com.baekjoon.problem.step4;
 //2 2 2
 //예제 출력 1
 //1 2 1 1 0
-public class four10810 {
+public class four10810_ {
+
+    public static void main(String[] args) throws IOException {
+
+
+        //Scanner 방식
+
+/*
+        Scanner sc = new Scanner(System.in);
+
+        int x = sc.nextInt();//바구니 개수
+        int y = sc.nextInt();//공을 넣는 횟수
+        int a[] = new int[x];//바구니 배열 생성
+
+        for (int i = 0; i < x; i++) {
+
+            int b = sc.nextInt()-1;//i번 바구니
+            int z = sc.nextInt()-1;//j번 바구니
+            int ballcount = sc.nextInt();//k번 공
+
+            for (int j = b; j <= z; j++) {
+
+                a[j] = ballcount;// 바구니에 공 넣기
+            }
+
+
+        }
+        //결과 출력
+        for (int i = 0; i < x; i++) {
+
+            System.out.println(a[i]+" ");
+        }
+*/
+
+        //BufferedREader 방식
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int N = Integer.parseInt(st.nextToken()); // 바구니의 개수
+        int M = Integer.parseInt(st.nextToken()); // 공을 넣는 횟수
+        int[] baskets = new int[N]; // 바구니 배열 생성
+
+        for (int i = 0; i < M; i++) {
+            st = new StringTokenizer(br.readLine());
+            int start = Integer.parseInt(st.nextToken()) - 1; // i번 바구니
+            int end = Integer.parseInt(st.nextToken()) - 1; // j번 바구니
+            int num = Integer.parseInt(st.nextToken()); // k번 공
+
+            for (int j = start; j <= end; j++) {
+                baskets[j] = num; // 바구니에 공 넣기
+            }
+        }
+
+        // 결과 출력
+        for (int i = 0; i < N; i++) {
+            System.out.print(baskets[i] + " ");
+        }
+
+
+
+
+    }
 }
