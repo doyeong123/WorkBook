@@ -3,8 +3,6 @@ package com.baekjoon.problem.step4;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.HashSet;
-import java.util.Scanner;
 
 //배열을 활용하여 서로 다른 값의 개수를 찾는 문제
 //나머지 다국어
@@ -26,7 +24,7 @@ import java.util.Scanner;
 예제 출력 1
 10 */
 //각 수를 42로 나눈 나머지는 1, 2, 3, 4, 5, 6, 7, 8, 9, 10이다.
-public class four3052 {
+public class four3052_F {
 
     public static void main(String[] args) throws IOException {
 

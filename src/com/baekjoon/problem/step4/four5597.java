@@ -25,6 +25,7 @@ import java.util.Scanner;
 //예제 출력 1
 //2
 //8
+
 public class four5597 {
 
     public static void main(String[] args) {
@@ -35,15 +36,15 @@ public class four5597 {
 
         for (int i = 1; i < 29; i++) {
 
-            int a = sc.nextInt();
-            x[a] = 1;
+            x[sc.nextInt()]++;
         }
+        sc.close();
 
-        for(int i=1; i<x.length; i++)
+        for(int i=1; i<=30; i++)
         {
-            if(x[i] != 1)
+            if(x[i] == 0)
             {
-                System.out.println(x[i]+2);
+                System.out.println(i);
             }
         }
 
